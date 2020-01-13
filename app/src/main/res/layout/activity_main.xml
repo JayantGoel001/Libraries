@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/niceSpinner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp">
+
+    </org.angmarch.views.NiceSpinner>
+    <ru.katso.livebutton.LiveButton
+        android:id="@+id/liveButton"
+        xmlns:livebutton="http://schemas.android.com/apk/res-auto"
+        android:text="@string/live_button"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        livebutton:corners="4dp"
+        livebutton:normalHeight="6dp"
+        livebutton:pressedHeight="2dp"
+        livebutton:backgroundColor="#F57F76"
+        livebutton:shadowColor="#B16262"
+        android:layout_height="60dp"/>
+    <LinearLayout
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <at.markushi.ui.CircleButton
+        android:layout_weight="1"
+        android:id="@+id/ic_circleButton"
+        android:src="@drawable/ic_audio"
+        android:layout_marginTop="20dp"
+        app:cb_color="#99CC00"
+        app:cb_pressedRingWidth="8dip"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <xyz.hanks.library.bang.SmallBangView
+        android:layout_weight="1"
+        android:id="@+id/heartBreaker"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="96dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/heartselector"
+            />
+
+    </xyz.hanks.library.bang.SmallBangView>
+        <co.aenterhy.toggleswitch.ToggleSwitchButton
+            android:id="@+id/toggle"
+            android:layout_weight="1"
+            style="@style/ToggleSwitchButton"
+            >
+        </co.aenterhy.toggleswitch.ToggleSwitchButton>
+    </LinearLayout>
+    <jp.co.recruit_lifestyle.android.widget.PlayPauseButton
+        android:id="@+id/main_play_pause_button"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_height="100dp">
+
+    </jp.co.recruit_lifestyle.android.widget.PlayPauseButton>
+
+    <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
+        android:id="@+id/progress_circular"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/saclogo"
+        android:scaleType="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        app:cfl_border="true"
+        app:cfl_border_width="8dp"
+        app:cfl_progress="70"
+        app:cfl_wave_amplitude=".06"
+        app:cfl_wave_color="#67346C"
+        >
+
+    </com.mikhaellopez.circularfillableloaders.CircularFillableLoaders>
+
+
+
+</LinearLayout>
+</ScrollView>
