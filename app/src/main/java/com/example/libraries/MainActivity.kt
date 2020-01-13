@@ -6,8 +6,11 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.view.MotionEvent
 import android.widget.Toast
+import androidx.core.view.isVisible
 import co.aenterhy.toggleswitch.ToggleSwitchButton
+import com.vatsal.imagezoomer.ZoomAnimation
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 
@@ -16,17 +19,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        toggle.setOnTriggerListener(object:ToggleSwitchButton.OnTriggerListener
-        {
-            override fun toggledUp() {
-                Toast.makeText(this@MainActivity,"Camera",Toast.LENGTH_SHORT).show()
-            }
-
-            override fun toggledDown() {
-                Toast.makeText(this@MainActivity,"Audio",Toast.LENGTH_SHORT).show()
-            }
-
-        })
 
         val mediaPlayer= MediaPlayer()
         val url="http://colorsfx.com/android/files/sample_song.mp3"
